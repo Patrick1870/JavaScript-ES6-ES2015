@@ -1,0 +1,19 @@
+{
+  "name": "javascript-es6-es2015",
+  "version": "1.0.0",
+  "description": "ES6 playground",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrick1870/JavaScript-ES6-ES2015.git"
+  },
+  "author": "Patryk Adach",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Patrick1870/JavaScript-ES6-ES2015/issues"
+  },
+  "homepage": "https://github.com/Patrick1870/JavaScript-ES6-ES2015#readme"
+}
