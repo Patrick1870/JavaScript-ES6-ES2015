@@ -220,3 +220,16 @@ console.log(carWeakMap1);
 
 
 
+function Prefixer(prefix) {
+	this.prefix = prefix;
+}
+
+Prefixer.prototype.prefixArray = function(arr) {
+	return arr.map((x) => {
+		console.log(this.prefix + x);
+	});
+}
+
+let pre = new Prefixer('hell ');
+pre.prefixArray(['jeff', 'joe'])
+
