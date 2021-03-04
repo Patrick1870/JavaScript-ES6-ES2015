@@ -293,7 +293,7 @@ function getData(method, url) {
 }
 
 getData('GET', 'jsonplaceholder.typicode.com/todos').then(function(data) {
-	console.log(data);
+	//console.log(data);
 	let todos = JSON.parse(data); // always parse JSON
 	let output = '';
 	for(let todo of todos) {
@@ -306,12 +306,28 @@ getData('GET', 'jsonplaceholder.typicode.com/todos').then(function(data) {
 	}
 	document.getElementById('template').innerHTML = output;
 }).catch(function(err) {
-	console.log(err);
+	//console.log(err);
 });
 
 
+// Generators 
+function *generator1() {
+	console.log('hell');
+	yield 'Yield 1 Ran';
+	console.log('heaven');
+	yield 'Yield 2 Ran';
+	return 'Generator has done the work.';
+}
 
+var g = generator1();
 
+//console.log(g.next());
+//console.log(g.next());
+//console.log(g.next());
+
+for(let value of g) {
+	console.log(value);
+}
 
 
 
