@@ -157,11 +157,66 @@ test(...args);
 test(...args, ...args1);
 
 
+// Set, Map, WeakSet, WeakMap
+let myArray = [432,325,6375,345,312,233,1,4,46,8,9675];
+let mySet = new Set(myArray);
 
 
+// mySet can store different type of values, e.g. num and strings
+mySet.add('100');
+mySet.add({a: 1, b:2});
 
+// delete
+mySet.delete(432);
+mySet.clear();
+mySet.add(100);
+mySet.add('100');
 
+console.log(mySet);
+console.log(mySet.size);
 
+mySet.forEach((val) => console.log(val));
+
+// Map key/value
+let myMap = new Map([['a1', 'hell'], ['b2', 'heaven']]);
+myMap.set('c3', 'fool');
+myMap.delete('a1');
+
+console.log(myMap);
+
+// weakset
+let carWeakSet = new WeakSet();
+
+let car1 = {
+	make: 'bwm',
+	model: 'e39'
+}
+
+let car2 = {
+	make: 'audi',
+	model: 'RS7'
+}
+
+carWeakSet.add(car1);
+carWeakSet.add(car2);
+carWeakSet.delete(car2)
+
+console.log(carWeakSet);
+
+let carWeakMap1 = new WeakMap();
+
+let key1 = {
+	id: 1
+}
+
+let key2 = {
+	id: 2
+}
+
+carWeakMap1.set(key1, car1);
+carWeakMap1.set(key2, car2);
+
+console.log(carWeakMap1);
 
 
 
